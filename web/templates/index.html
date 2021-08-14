@@ -1,0 +1,810 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Home</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="{% static "images/icons/favicon.png" %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static "vendor/bootstrap/css/bootstrap.min.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "fonts/font-awesome-4.7.0/css/font-awesome.min.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "fonts/themify/themify-icons.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "fonts/Linearicons-Free-v1.0.0/icon-font.min.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "fonts/elegant-font/html-css/style.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "vendor/animate/animate.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "vendor/css-hamburgers/hamburgers.min.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "vendor/animsition/css/animsition.min.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "vendor/select2/select2.min.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "vendor/daterangepicker/daterangepicker.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "vendor/slick/slick.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "vendor/lightbox2/css/lightbox.min.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/util.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}">
+</head>
+<body class="animsition">
+    {% if should_pass_test %}
+    <div class="test">
+        <div class="question">
+            <p style="font-family: sans-serif; font-weight: bold; font-size: 19px; line-height: 22px">Пройдите профориентационный тест для определения более близкой вам специфики!</p>
+        </div>
+        <div class="question">
+            <p>1.	Какой урок был любимым в школе?</p>
+            <input type="radio" id="1.1" name="1" value="1.1" data-marks="{&quot;2&quot;:4,&quot;3&quot;:2,&quot;4&quot;:2,&quot;5&quot;:4,&quot;6&quot;:2,&quot;7&quot;:2,&quot;8&quot;:2}"> <label for="1.1"> a.	Математика</label> <br>
+            <input type="radio" id="1.2" name="1" value="1.2" data-marks="{&quot;1&quot;:3,&quot;9&quot;:4}"> <label for="1.2"> b.	ИЗО</label> <br>
+            <input type="radio" id="1.3" name="1" value="1.3" data-marks="{&quot;1&quot;:1,&quot;2&quot;:1,&quot;3&quot;:1,&quot;4&quot;:1,&quot;5&quot;:1,&quot;6&quot;:1,&quot;7&quot;:1,&quot;8&quot;:1,&quot;9&quot;:1}"> <label for="1.3"> c.	Физкультура</label> <br>
+            <input type="radio" id="1.4" name="1" value="1.4" data-marks="{&quot;1&quot;:1}"> <label for="1.4"> d.	Литература</label> <br>
+        </div>
+        <div class="question">
+            <p>2.	Каким хобби вы любите заниматься?</p>
+            <input type="radio" id="2.1" name="2"> <label for="2.1"> a.	Собирать конструкторы</label> <br>
+            <input type="radio" id="2.2" name="2"> <label for="2.2"> b.	Творчество</label> <br>
+            <input type="radio" id="2.3" name="2"> <label for="2.3"> c.	другое</label> <br>
+        </div>
+        <div class="question">
+            <p>3.	Сколько времени вы готовы уделять тому, чтобы обрести новую it-профессию?</p>
+            <input type="radio" id="3.1" name="3"> <label for="3.1"> a.	Готов трудиться не покладая рук. Готов уделить 3-6 месяце</label> <br>
+            <input type="radio" id="3.2" name="3"> <label for="3.2"> b.	15-25 часов в неделю на протяжении 4-6 месяцев. Расчитываю на высокую зарплату у профессии</label> <br>
+            <input type="radio" id="3.3" name="3"> <label for="3.3"> c.	Не более 10 часов в неделю. В среднем 2-3 месяца</label> <br>
+            <input type="radio" id="3.4" name="3"> <label for="3.4"> d.	Я очень занят, но очень хочу обрести новую it-профессию</label> <br>
+        </div>
+        <div class="question">
+            <p>4.	К чему лежит ваша душа?</p>
+            <input type="radio" id="4.1" name="4"> <label for="4.1"> a.	Креативить и придумывать</label> <br>
+            <input type="radio" id="4.2" name="4"> <label for="4.2"> b.	Руководить и принимать решения</label> <br>
+            <input type="radio" id="4.3" name="4"> <label for="4.3"> c.	Выполнять ювелирную работу</label> <br>
+            <input type="radio" id="4.4" name="4"> <label for="4.4"> d.	Договариваться и общаться</label> <br>
+            <input type="radio" id="4.5" name="4"> <label for="4.5"> e.	Анализировать</label> <br>
+        </div>
+        <div class="question">
+            <p>5.	Ваше идеальное рабочее место?</p>
+            <input type="radio" id="5.1" name="5"> <label for="5.1"> a.	Офис, рабочий коллектив из 100 человек. Зона отдыха с диванами и приставкой, кофе бар у сотрудников. Окна с видом на центр города</label> <br>
+            <input type="radio" id="5.2" name="5"> <label for="5.2"> b.	Небольшой офис возле дома, коллектив до 20 человек</label> <br>
+            <input type="radio" id="5.3" name="5"> <label for="5.3"> c.	Пляж, лежак и ваш ноутбук</label> <br>
+            <input type="radio" id="5.4" name="5"> <label for="5.4"> d.	Дома</label> <br>
+        </div>
+        <div class="question">
+            <p>6.	Какое утверждение максимально вам подходит?</p>
+            <input type="radio" id="6.1" name="6"> <label for="6.1"> a.	Готов много работать, чтобы много зарабатывать</label> <br>
+            <input type="radio" id="6.2" name="6"> <label for="6.2"> b.	Ищу более легких путей при решении поставленной задачи</label> <br>
+            <input type="radio" id="6.3" name="6"> <label for="6.3"> c.	Не успокоюсь пока не сделаю то что запланировал</label> <br>
+        </div>
+        <div class="question">
+            <p>7.	Выберете верное для вас утверждение. Мне нравится решать задачи, требующие:</p>
+            <input type="radio" id="7.1" name="7"> <label for="7.1"> a.	Умения считать (математические головоломки)</label> <br>
+            <input type="radio" id="7.2" name="7"> <label for="7.2"> b.	Умения мыслить логически (ребусы и тп.)</label> <br>
+            <input type="radio" id="7.3" name="7"> <label for="7.3"> c.	Внимательности и способности находить отличия</label> <br>
+            <input type="radio" id="7.4" name="7"> <label for="7.4"> d.	Креативности, воображения</label> <br>
+        </div>
+        <div class="question">
+            <p>8.	Вы стараетесь разнообразить привычные действия?</p>
+            <input type="radio" id="8.1" name="8"> <label for="8.1"> a.	Стараюсь вносить разнообразие</label> <br>
+            <input type="radio" id="8.2" name="8"> <label for="8.2"> b.	Я почти всегда действую привычными способами</label> <br>
+        </div>
+        <div class="question">
+            <p>9.	Нравится ли вам экспериментировать с формой и цветом?</p>
+            <input type="radio" id="9.1" name="9"> <label for="9.1"> a.	Да</label> <br>
+            <input type="radio" id="9.2" name="9"> <label for="9.2"> b.	Нет</label> <br>
+        </div>
+        <div class="question">
+            <p>10.	Постарайтесь выбрать один из предложенных вариантов</p>
+            <input type="radio" id="10.1" name="10"> <label for="10.1"> a.	Создавать новые алгоритмы</label> <br>
+            <input type="radio" id="10.2" name="10"> <label for="10.2"> b.	Тестировать программы, написанные другими</label> <br>
+        </div>
+        <div class="question">
+            <p>11.	Постарайтесь выбрать один из предложенных вариантов</p>
+            <input type="radio" id="11.1" name="11"> <label for="11.1"> a.	Делать дизайн интерфейса</label> <br>
+            <input type="radio" id="11.2" name="11"> <label for="11.2"> b.	Рекламировать сайт в интернете</label> <br>
+        </div>
+        <div class="question">
+            <p>12.	Постарайтесь выбрать один из предложенных вариантов</p>
+            <input type="radio" id="12.1" name="12"> <label for="12.1"> a.	Собирать компьютеры, обьединять их в сеть и устанавливать программы</label> <br>
+            <input type="radio" id="12.2" name="12"> <label for="12.2"> b.	Изучать и подбирать методы защиты данных от хакеров</label> <br>
+        </div>
+        <div class="question">
+            <p>13.	Постарайтесь выбрать один из предложенных вариантов</p>
+            <input type="radio" id="13.1" name="13"> <label for="13"> a.	Постоянно изучать работы современных дизайнером</label> <br>
+            <input type="radio" id="13.2" name="13"> <label for="13"> b.	Постоянно изучать новинки компьютерной техники</label> <br>
+        </div>
+        <div class="question">
+            <p>14.	Постарайтесь выбрать один из предложенных вариантов</p>
+            <input type="radio" id="14.1" name="14"> <label for="14.1"> a.	Ежедневно работать со шрифтами, фотографиями, цветами</label> <br>
+            <input type="radio" id="14.2" name="14"> <label for="14.2"> b.	Ежедневно изучать ОС на предмет наличия в низ уязвимостей</label> <br>
+        </div>
+        <div class="question">
+            <p>15.	Постарайтесь выбрать один из предложенных вариантов</p>
+            <input type="radio" id="15.1" name="15"> <label for="15.1"> a.	Разрабатывать алгоритмы и логику программы</label> <br>
+            <input type="radio" id="15.2" name="15"> <label for="15.2"> b.	Разрабатывать логику сайта компании</label> <br>
+            <input type="radio" id="15.3" name="15"> <label for="15.3"> c.	Разрабатывтаь концепцию продвижения товара или услуги компании в интернете</label> <br>
+        </div>
+        <div class="question">
+            <p>16.	Постарайтесь выбрать один из предложенных вариантов</p>
+            <input type="radio" id="16.1" name="16"> <label for="16.1"> a.	Проверять работает ли сайт или приложение так, как задумано</label> <br>
+            <input type="radio" id="16.2" name="16"> <label for="16.2"> b.	Создавать удобный и красивый интерфейс</label> <br>
+        </div>
+        <div class="question">
+            <p>17.	Постарайтесь выбрать один из предложенных вариантов</p>
+            <input type="radio" id="17.1" name="17"> <label for="17.1"> a.	Программировать логику и поведение разных компонентов веб-приложения</label> <br>
+            <input type="radio" id="17.2" name="17"> <label for="17.2"> b.	Рисовать графические элементы веб-приложения</label> <br>
+        </div>
+        <div class="question">
+            <p>18.	Постарайтесь выбрать один из предложенных вариантов</p>
+            <input type="radio" id="18.1" name="18"> <label for="18.1"> a.	Учавствовать в разработке программ</label> <br>
+            <input type="radio" id="18.2" name="18"> <label for="18.2"> b.	Обкатывать программы на работоспособность</label> <br>
+            <input type="radio" id="18.3" name="18"> <label for="18.3"> c.	Устанавливать и настраивать сетевые программы, сервера</label> <br>
+        </div>
+        <div class="question">
+            <p>19.	Постарайтесь выбрать один из предложенных вариантов</p>
+            <input type="radio" id="19.1" name="19"> <label for="19.1"> a.	Изучать различные методологии разработки качественных приложений</label> <br>
+            <input type="radio" id="19.2" name="19"> <label for="19.2"> b.	Обучать сотрудников не попадаться в ловушки хакеров</label> <br>
+        </div>
+        <div class="question">
+            <p>20.	Вы стремитесь внести перемены и украсить окружающую вас среду?</p>
+            <input type="radio" id="20.1" name="20"> <label for="20.1"> a.	Да</label> <br>
+            <input type="radio" id="20.2" name="20"> <label for="20.2"> b.	Нет</label> <br>
+        </div>
+        <div class="result-button">
+            <button type="button" id="test-result">Узнать результат!</button>
+        </div>
+    </div>
+    {% endif %}
+	<!-- header fixed -->
+	<div class="wrap_header fixed-header2 trans-0-4">
+		<!-- Logo -->
+		<a href="/" class="logo">
+			Медиаплатформа
+		</a>
+
+		<!-- Menu -->
+		<div class="wrap_menu">
+			<nav class="menu">
+				<ul class="main_menu">
+					<li>
+						<a href="/">Главная</a>
+					</li>
+
+					<li>
+						<a href="product.html">Курсы</a>
+					</li>
+
+					<li>
+						<a href="about.html">О нас</a>
+					</li>
+
+					<li>
+						<a href="contact.html">Контакты</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+	</div>
+
+	<!-- Header -->
+	<header class="header2">
+		<!-- Header desktop -->
+		<div class="container-menu-header-v2 p-t-26">
+			<div class="topbar2">
+				<div class="topbar-social">
+					<a href="https://www.instagram.com/programming_courses/" class="topbar-social-item fa fa-instagram"/>
+				</div>
+
+				<a href="index.html" class="logo2">
+					Медиаплатформа
+				</a>
+
+				<div class="topbar-child2">
+                    {% if not user.is_authenticated %}
+                        <a href="/login" class="header-wrapicon1 dis-block m-l-30">
+                            Вход
+                        </a>
+                    {% else %}
+                        <a href="/profile" class="header-wrapicon1 dis-block m-l-30">
+                            Личный кабинет
+                        </a>
+                        <a href="/logout" class="header-wrapicon1 dis-block m-l-30">
+                            Выйти
+                        </a>
+                    {% endif %}
+
+					<span class="linedivide1"></span>
+
+					<div class="header-wrapicon2 m-r-13">
+						<img src="{% static "images/icons/icon-header-02.png" %}" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<span class="header-icons-noti">0</span>
+
+						<!-- Header cart noti -->
+						<div class="header-cart header-dropdown">
+							<ul class="header-cart-wrapitem">
+								<li class="header-cart-item">
+									<div class="header-cart-item-img">
+										<img src="{% static "images/item-cart-01.jpg" %}" alt="IMG">
+									</div>
+
+									<div class="header-cart-item-txt">
+										<a href="#" class="header-cart-item-name">
+											White Shirt With Pleat Detail Back
+										</a>
+
+										<span class="header-cart-item-info">
+											1 x $19.00
+										</span>
+									</div>
+								</li>
+
+							</ul>
+
+							<div class="header-cart-total">
+								Итого: ...
+							</div>
+
+							<div class="header-cart-buttons">
+								<div class="header-cart-wrapbtn">
+									<!-- Button -->
+									<a href="cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										К оплате
+									</a>
+								</div>
+
+								<div class="header-cart-wrapbtn">
+									<a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										Очистить
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="wrap_header">
+
+				<!-- Menu -->
+				<div class="wrap_menu">
+					<nav class="menu">
+						<ul class="main_menu">
+							<li>
+								<a href="/">Главная</a>
+							</li>
+
+							<li>
+								<a href="/courses">Курсы</a>
+							</li>
+
+							<li>
+								<a href="/about">О нас</a>
+							</li>
+
+							<li>
+								<a href=/"contacts">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+
+				<!-- Header Icon -->
+				<div class="header-icons">
+
+				</div>
+			</div>
+		</div>
+
+		<!-- Header Mobile -->
+		<div class="wrap_header_mobile">
+			<!-- Logo moblie -->
+			<a href="index.html" class="logo-mobile">
+				Медиаплатформа
+			</a>
+
+			<!-- Button show menu -->
+			<div class="btn-show-menu">
+				<!-- Header Icon mobile -->
+				<div class="header-icons-mobile">
+					<a href="#" class="header-wrapicon1 dis-block">
+						<img src="{% static "images/icons/icon-header-01.png" %}" class="header-icon1" alt="ICON">
+					</a>
+
+					<span class="linedivide2"></span>
+
+					<div class="header-wrapicon2">
+						<img src="{% static "images/icons/icon-header-02.png" %}" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<span class="header-icons-noti">0</span>
+
+						<!-- Header cart noti -->
+						<div class="header-cart header-dropdown">
+							<ul class="header-cart-wrapitem">
+								<li class="header-cart-item">
+									<div class="header-cart-item-img">
+										<img src="{% static "images/item-cart-01.jpg" %}" alt="IMG">
+									</div>
+
+									<div class="header-cart-item-txt">
+										<a href="#" class="header-cart-item-name">
+											White Shirt With Pleat Detail Back
+										</a>
+
+										<span class="header-cart-item-info">
+											1 x $19.00
+										</span>
+									</div>
+								</li>
+
+								<li class="header-cart-item">
+									<div class="header-cart-item-img">
+										<img src="{% static "images/item-cart-02.jpg" %}" alt="IMG">
+									</div>
+
+									<div class="header-cart-item-txt">
+										<a href="#" class="header-cart-item-name">
+											Converse All Star Hi Black Canvas
+										</a>
+
+										<span class="header-cart-item-info">
+											1 x $39.00
+										</span>
+									</div>
+								</li>
+
+								<li class="header-cart-item">
+									<div class="header-cart-item-img">
+										<img src="{% static "images/item-cart-03.jpg" %}" alt="IMG">
+									</div>
+
+									<div class="header-cart-item-txt">
+										<a href="#" class="header-cart-item-name">
+											Nixon Porter Leather Watch In Tan
+										</a>
+
+										<span class="header-cart-item-info">
+											1 x $17.00
+										</span>
+									</div>
+								</li>
+							</ul>
+
+							<div class="header-cart-total">
+								Total: Цена курса
+							</div>
+
+							<div class="header-cart-buttons">
+								<div class="header-cart-wrapbtn">
+									<!-- Button -->
+									<a href="cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										View Cart
+									</a>
+								</div>
+
+								<div class="header-cart-wrapbtn">
+									<!-- Button -->
+									<a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										Check Out
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="btn-show-menu-mobile hamburger hamburger--squeeze">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- Menu Mobile -->
+		<div class="wrap-side-menu" >
+			<nav class="side-menu">
+				<ul class="main-menu">
+
+
+					<li class="item-topbar-mobile p-l-10">
+						<div class="topbar-social-mobile">
+							<a href="https://www.instagram.com/programming_courses/" class="topbar-social-item fa fa-instagram"/>
+						</div>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="home-02.html">Главная</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="product.html">Курсы</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="about.html">О нас</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="contact.html">Контакты</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<!-- Slide1 -->
+	<section class="slide1">
+		<div class="wrap-slick1">
+			<div class="slick1">
+				<div class="item-slick1 item1-slick1" style="background-image: url({% static "images/master-slide-07.jpg" %});">
+					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+						<h2 class="caption1-slide1 xl-text2 t-center bo14 p-b-6 animated visible-false m-b-22" data-appear="fadeInUp">
+							Тут можно объявить об акциях
+						</h2>
+
+						<span class="caption2-slide1 m-text1 t-center animated visible-false m-b-33" data-appear="fadeInDown">
+							Дополнительная информация
+						</span>
+
+						<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="zoomIn">
+							<!-- Button -->
+							<a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
+								Подробнее
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="item-slick1 item2-slick1" style="background-image: url({% static "images/master-slide-06.jpg" %});">
+					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+						<h2 class="caption1-slide1 xl-text2 t-center bo14 p-b-6 animated visible-false m-b-22" data-appear="rollIn">
+							Тут можно объявить об акциях
+						</h2>
+
+						<span class="caption2-slide1 m-text1 t-center animated visible-false m-b-33" data-appear="lightSpeedIn">
+							Дополнительная информация
+						</span>
+
+						<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="slideInUp">
+							<!-- Button -->
+							<a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
+								Подробнее
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="item-slick1 item3-slick1" style="background-image: url({% static "images/master-slide-02.jpg" %});">
+					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+						<h2 class="caption1-slide1 xl-text2 t-center bo14 p-b-6 animated visible-false m-b-22" data-appear="rotateInDownLeft">
+							Тут можно объявить об акциях
+						</h2>
+
+						<span class="caption2-slide1 m-text1 t-center animated visible-false m-b-33" data-appear="rotateInUpRight">
+							Дополнительная информация
+						</span>
+
+						<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="rotateIn">
+							<!-- Button -->
+							<a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
+								Подробнее
+							</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Our product -->
+	<section class="bgwhite p-t-45 p-b-58">
+		<div class="container">
+			<div class="sec-title p-b-22">
+				<h3 class="m-text5 t-center">
+					Наши курсы
+				</h3>
+			</div>
+
+			<!-- Tab01 -->
+			<div class="tab01">
+				<!-- Tab panes -->
+				<div class="tab-content p-t-35">
+					<!-- - -->
+					<div class="tab-pane fade show active" id="best-seller" role="tabpanel">
+						<div class="row">
+                            {% if courses %}
+                                {% for course in courses %}
+                                    <div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
+                                        <div class="block2">
+                                            <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
+                                                <img src="{{ course.photo.url }}" alt="IMG-PRODUCT">
+
+                                                <div class="block2-overlay trans-0-4">
+                                                    <div class="block2-btn-addcart w-size1 trans-0-4">
+                                                        <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+                                                            В корзину
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="block2-txt p-t-20">
+                                                <a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+                                                    {{ course.title }}
+                                                </a>
+
+                                                <span class="block2-price m-text6 p-r-5">
+                                                    {{ course.price }} KZT
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Banner video -->
+	<section class="parallax0 parallax100" style="background-image: url({% static "images/bg-video-01.jpg" %});">
+		<div class="overlay0 p-t-190 p-b-200">
+			<div class="flex-col-c-m p-l-15 p-r-15">
+				<span class="m-text9 p-t-45 fs-20-sm">
+					Здесь какой-нибудь
+				</span>
+
+				<h3 class="l-text1 fs-35-sm">
+					блок с видео
+				</h3>
+
+				<span class="btn-play s-text4 hov5 cs-pointer p-t-25" data-toggle="modal" data-target="#modal-video-01">
+					<i class="fa fa-play" aria-hidden="true"></i>
+					Просмотреть
+				</span>
+			</div>
+		</div>
+	</section>
+
+	<!-- Blog -->
+
+	<!-- Instagram -->
+	<section class="instagram p-t-20">
+		<div class="sec-title p-b-52 p-l-15 p-r-15">
+			<h3 class="m-text5 t-center p-t-30">
+				Подпишитесь на наш Instagram
+			</h3>
+		</div>
+
+		<div class="flex-w">
+			<!-- Block4 -->
+			<div class="block4 wrap-pic-w">
+				<img src="{% static "images/gallery-03.jpg" %}" alt="IMG-INSTAGRAM">
+
+				<a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
+					<div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
+						<p class="s-text10 m-b-15 h-size1 of-hidden">
+							Краткое описание о посте
+						</p>
+					</div>
+				</a>
+			</div>
+			<!-- Block4 -->
+			<div class="block4 wrap-pic-w">
+				<img src="{% static "images/gallery-03.jpg" %}" alt="IMG-INSTAGRAM">
+
+				<a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
+					<div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
+						<p class="s-text10 m-b-15 h-size1 of-hidden">
+							Краткое описание о посте
+						</p>
+					</div>
+				</a>
+			</div>
+			<!-- Block4 -->
+			<div class="block4 wrap-pic-w">
+				<img src="{% static "images/gallery-03.jpg" %}" alt="IMG-INSTAGRAM">
+
+				<a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
+					<div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
+						<p class="s-text10 m-b-15 h-size1 of-hidden">
+							Краткое описание о посте
+						</p>
+					</div>
+				</a>
+			</div>
+			<!-- Block4 -->
+			<div class="block4 wrap-pic-w">
+				<img src="{% static "images/gallery-03.jpg" %}" alt="IMG-INSTAGRAM">
+
+				<a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
+					<div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
+						<p class="s-text10 m-b-15 h-size1 of-hidden">
+							Краткое описание о посте
+						</p>
+					</div>
+				</a>
+			</div>
+			<!-- Block4 -->
+			<div class="block4 wrap-pic-w">
+				<img src="{% static "images/gallery-03.jpg" %}" alt="IMG-INSTAGRAM">
+
+				<a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
+					<div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
+						<p class="s-text10 m-b-15 h-size1 of-hidden">
+							Краткое описание о посте
+						</p>
+					</div>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Shipping -->
+	<section class="shipping bgwhite p-t-62 p-b-46">
+		<div class="flex-w p-l-15 p-r-15">
+			<div class="flex-col-c w-size5 p-l-15 p-r-15 p-t-16 p-b-15 respon1">
+				<h4 class="m-text12 t-center">
+					Описываем наши преимущества и плюсы
+				</h4>
+
+				<a href="#" class="s-text11 t-center">
+					Описываем наши преимущества и плюсы
+				</a>
+			</div>
+
+			<div class="flex-col-c w-size5 p-l-15 p-r-15 p-t-16 p-b-15 bo2 respon2">
+				<h4 class="m-text12 t-center">
+					Описываем наши преимущества и плюсы
+				</h4>
+
+				<span class="s-text11 t-center">
+					Описываем наши преимущества и плюсы
+				</span>
+			</div>
+
+			<div class="flex-col-c w-size5 p-l-15 p-r-15 p-t-16 p-b-15 respon1">
+				<h4 class="m-text12 t-center">
+					Описываем наши преимущества и плюсы
+				</h4>
+
+				<span class="s-text11 t-center">
+					Описываем наши преимущества и плюсы
+				</span>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Footer -->
+	<footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45">
+		<div class="flex-w p-b-90 justify-content-center">
+			<div class="w-size6 p-t-30 p-l-15 p-r-15 respon3 col-md-5">
+				<h4 class="s-text12 p-b-30">
+					Связаться
+				</h4>
+
+				<div>
+					<p class="s-text7 w-size27">
+						Возникли вопросы? Вы можете выйти с нами на связть по этому номеру +7 701 938 0463
+					</p>
+					<p class="s-text7 w-size27">
+						Так же мы в социальных сетях:
+					</p>
+					<div class="flex-m p-t-30">
+						<a href="https://www.instagram.com/programming_courses/" rel="noopener" class="fs-18 color1 p-r-20 fa fa-instagram"/>
+					</div>
+				</div>
+			</div>
+
+			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4 col-md-2">
+				<h4 class="s-text12 p-b-30">
+					Навигация
+				</h4>
+
+				<ul>
+					<li class="p-b-9">
+						<a href="/home-02.html" class="s-text7">
+							Главная
+						</a>
+					</li>
+
+					<li class="p-b-9">
+						<a href="/product.html" class="s-text7">
+							Курсы
+						</a>
+					</li>
+
+					<li class="p-b-9">
+						<a href="/about.html" class="s-text7">
+							О нас
+						</a>
+					</li>
+
+					<li class="p-b-9">
+						<a href="/contact.html" class="s-text7">
+							Контакты
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+
+
+
+	<!-- Back to top -->
+	<div class="btn-back-to-top bg0-hov" id="myBtn">
+		<span class="symbol-btn-back-to-top">
+			<i class="fa fa-angle-double-up" aria-hidden="true"></i>
+		</span>
+	</div>
+
+	<!-- Container Selection1 -->
+	<div id="dropDownSelect1"></div>
+
+	<!-- Modal Video 01-->
+	<div class="modal fade" id="modal-video-01" tabindex="-1" role="dialog" aria-hidden="true">
+
+		<div class="modal-dialog" role="document" data-dismiss="modal">
+			<div class="close-mo-video-01 trans-0-4" data-dismiss="modal" aria-label="Close">&times;</div>
+
+			<div class="wrap-video-mo-01">
+				<div class="w-full wrap-pic-w op-0-0"><img src="{% static "images/icons/video-16-9.jpg" %}" alt="IMG"></div>
+				<div class="video-mo-01">
+					<iframe src="https://www.youtube.com/embed/Nt8ZrWY2Cmk?rel=0&amp;showinfo=0" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{% static "vendor/jquery/jquery-3.2.1.min.js" %}"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{% static "vendor/animsition/js/animsition.min.js" %}"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{% static "vendor/bootstrap/js/popper.js" %}"></script>
+	<script type="text/javascript" src="{% static "vendor/bootstrap/js/bootstrap.min.js" %}"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{% static "vendor/select2/select2.min.js" %}"></script>
+	<script type="text/javascript">
+		$(".selection-1").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{% static "vendor/slick/slick.min.js" %}"></script>
+	<script type="text/javascript" src="{% static "js/slick-custom.js" %}"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{% static "vendor/countdowntime/countdowntime.js" %}"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{% static "vendor/lightbox2/js/lightbox.min.js" %}"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{% static "vendor/sweetalert/sweetalert.min.js" %}"></script>
+	<script type="text/javascript">
+		$('.block2-btn-addcart').each(function(){
+			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+			$(this).on('click', function(){
+				swal(nameProduct, "Добавлен в корзину", "success");
+			});
+		});
+
+		$('.block2-btn-addwishlist').each(function(){
+			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+			$(this).on('click', function(){
+				swal(nameProduct, "is added to wishlist !", "success");
+			});
+		});
+	</script>
+
+    <script type="text/javascript">
+        const username = {% if user.is_authenticated %} "{{ user.username  }}" {% else %} null {% endif %}
+    </script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{% static "vendor/parallax100/parallax100.js" %}"></script>
+	<script type="text/javascript">
+        $('.parallax100').parallax100();
+	</script>
+<!--===============================================================================================-->
+	<script src="{% static "js/main.js" %}"></script>
+
+</body>
+</html>

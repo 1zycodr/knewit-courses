@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static "css/auth.css" %}">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div class="errors err-anime">
+        {% for field, errors in form.errors.items %}
+            {% for error in errors %}
+                <p class="err-message err-anime">{{ error }}</p>
+            {% endfor %}
+        {% endfor %}
+    </div>
+    <div class="container">
+        <div class="frame2">
+            <div class="nav">
+                <ul class="links">
+                    <li class="signin-active"><a class="btn">Регистрация</a></li>
+                </ul>
+            </div>
+            <div ng-app ng-init="checked = false">
+                <form class="form-signin" action="" method="POST" name="form">
+                    {% csrf_token %}
+                    <label for="fullname">Имя пользователя</label>
+                    {{ form.username }}
+                    <label for="email">Email</label>
+                    {{ form.email }}
+                    <label for="password">Пароль</label>
+                    {{ form.password1 }}
+                    <label for="password2">Подтвердите пароль</label>
+                    {{ form.password2 }}
+                    <button type="submit" class="btn-signup">Регистрация</button>
+                </form>
+                <div class="forgot2">
+                    <p style="color: floralwhite">Уже есть аккаунт?</p> <a href="/login" style="color:#FFF;">Войти</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
